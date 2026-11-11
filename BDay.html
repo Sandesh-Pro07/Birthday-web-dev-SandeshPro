@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday, Dolly 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Birth.css">
+</head>
+<body>
+<!-- Floating background (hearts + stars are added by script.js) -->
+<div id="floaters" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<!-- Music (put birthday-music.mp3 in the same folder) -->
+<audio id="music" src="birthday-music.mp3" loop preload="none"></audio>
+<button id="musicBtn" class="glass round" aria-label="Play or pause music" hidden>🎵</button>
+
+<!-- 1. LANDING -->
+<section id="landing" class="screen">
+  <p class="soft">A Special Day for Someone Special...</p>
+  <h1 class="script">Damini Sanwal ❤️</h1>
+  <p class="soft">Also known as Dolly &amp; Harshita</p>
+  <button id="openBtn" class="btn pulse">Open Your Surprise 🎁</button>
+</section>
+
+<!-- Main experience (hidden until the gift is opened) -->
+<main id="main" hidden>
+  <nav class="glass" id="nav">
+    <a href="#countdown">Countdown</a><a href="#celebrate">Celebrate</a><a href="#message">Message</a>
+    <a href="#gallery">Memories</a><a href="#cake">Cake</a><a href="#final">Surprise</a>
+  </nav>
+
+  <!-- 2. COUNTDOWN -->
+  <section id="countdown" class="screen">
+    <h2 class="script" id="cdTitle">Counting down to your day...</h2>
+    <div class="timer glass">
+      <div><b id="d">0</b><span>Days</span></div>
+      <div><b id="h">0</b><span>Hours</span></div>
+      <div><b id="m">0</b><span>Minutes</span></div>
+      <div><b id="s">0</b><span>Seconds</span></div>
+    </div>
+  </section>
+
+  <!-- 3. CELEBRATION -->
+  <section id="celebrate" class="screen">
+    <div class="balloon b1"></div><div class="balloon b2"></div><div class="balloon b3"></div>
+    <h2 class="script big" id="hbd" aria-label="Happy Birthday, Dolly!"></h2>
+    <p class="soft">To the cutest and most beautiful soul.</p>
+    <button id="confettiBtn" class="btn">Celebrate 🎉</button>
+  </section>
+
+  <!-- 4. MESSAGE -->
+  <section id="message" class="screen">
+    <div class="glass card">
+      <p id="typed" class="letter"></p>
+    </div>
+  </section>
+
+  <!-- 5. GALLERY: replace src with your own photos, e.g. photos/1.jpg -->
+  <section id="gallery" class="screen">
+    <h2 class="script">Beautiful Memories 📸</h2>
+    <div class="grid">
+      <figure><img src="https://placehold.co/400x500/f9c6e0/6b2c5e?text=Photo+1" alt="Memory 1"><figcaption>Your lovely smile</figcaption></figure>
+      <figure><img src="https://placehold.co/400x500/dcc6f9/4a2c6b?text=Photo+2" alt="Memory 2"><figcaption>A moment to remember</figcaption></figure>
+      <figure><img src="https://placehold.co/400x500/fbd3e9/6b2c5e?text=Photo+3" alt="Memory 3"><figcaption>Pure happiness</figcaption></figure>
+      <figure><img src="https://placehold.co/400x500/e5d4fb/4a2c6b?text=Photo+4" alt="Memory 4"><figcaption>Cute as ever</figcaption></figure>
+      <figure><img src="https://placehold.co/400x500/f9c6e0/6b2c5e?text=Photo+5" alt="Memory 5"><figcaption>Shining bright</figcaption></figure>
+      <figure><img src="https://placehold.co/400x500/dcc6f9/4a2c6b?text=Photo+6" alt="Memory 6"><figcaption>Always special</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 6. CAKE -->
+  <section id="cake" class="screen">
+    <div class="cake">
+      <div class="candles"><i class="candle"><u class="flame"></u></i><i class="candle"><u class="flame"></u></i><i class="candle"><u class="flame"></u></i></div>
+      <div class="tier t1"></div><div class="tier t2"></div><div class="plate"></div>
+    </div>
+    <button id="wishBtn" class="btn">Make a Wish ✨</button>
+    <p id="wishMsg" class="script wish"></p>
+  </section>
+
+  <!-- 7. FINAL -->
+  <section id="final" class="screen">
+    <h2 class="script big">Happy Birthday to YOU❤️!</h2>
+    <p class="script sub">Keep Smiling, Keep Shining, Damini! 💗</p>
+    <button id="finalBtn" class="btn">Launch Fireworks 🎆</button>
+  </section>
+</main>
+<script src="Birthday.js"></script>
+</body>
+</html> 
